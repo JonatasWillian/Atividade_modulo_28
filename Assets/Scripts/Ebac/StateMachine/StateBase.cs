@@ -35,7 +35,7 @@ namespace Ebac.StateMachine
 
         public override void OnStateEnter(object o = null)
         {
-            animator.SetTrigger(triggerIdle);
+            //animator.SetTrigger(triggerIdle);
         }
     }
 
@@ -49,7 +49,7 @@ namespace Ebac.StateMachine
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                animator.SetTrigger(triggerWalking);
+                //animator.SetTrigger(triggerWalking);
             }
         }
 
