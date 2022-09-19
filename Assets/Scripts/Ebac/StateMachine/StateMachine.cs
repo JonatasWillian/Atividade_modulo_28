@@ -27,13 +27,13 @@ namespace Ebac.StateMachine
             dictionaryStates.Add(typeEnum, state);
         }
 
-        public void SwitchState(T states)
+        public void SwitchState(T states, params object[] objs)
         {
             if (_currentState != null) _currentState.OnStateExit();
 
             _currentState = dictionaryStates[states];
 
-            _currentState.OnStateEnter();
+            _currentState.OnStateEnter(objs);
         }
 
         public void Update()

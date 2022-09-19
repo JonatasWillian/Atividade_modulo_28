@@ -27,10 +27,10 @@ public class FSM : MonoBehaviour
         //stateMachine.dictionaryStates.Add(PlayerStates.IDLE, new PlayerIdle());
         //stateMachine.dictionaryStates.Add(PlayerStates.WALKING, new PlayerWalking());
         //stateMachine.dictionaryStates.Add(PlayerStates.JUMPING, new PlayerJumping());
-        stateMachine.RegisterStates(PlayerStates.IDLE, new StateIdle());
-        stateMachine.RegisterStates(PlayerStates.WALKING, new StateWalking());
-        stateMachine.RegisterStates(PlayerStates.JUMPING, new StateJumping());
+        //stateMachine.RegisterStates(PlayerStates.IDLE, new StateIdle());
+        //stateMachine.RegisterStates(PlayerStates.WALKING, new StateWalking());
+        //stateMachine.RegisterStates(PlayerStates.JUMPING, new StateJumping());
 
-        stateMachine.SwitchState(PlayerStates.IDLE);
+        //stateMachine.SwitchState(PlayerStates.IDLE);
     }
 }
