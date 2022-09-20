@@ -31,10 +31,6 @@ namespace Boss
 
         public HealthBase healthBase;
 
-        public bool walkPlayer = false;
-
-        private string tagTriggerPlayer = "Player";
-
         private StateMachine<BossAction> stateMachine;
 
         private void Awake()
