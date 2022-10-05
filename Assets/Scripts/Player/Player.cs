@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour//, IDamageable
 {
+    public List<Collider> colliders;
     public Animator animator;
 
     public CharacterController characterController;
@@ -21,19 +22,65 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Flash")]
     public List<FlashColor> flashColors;
 
+    [Header("Life")]
+    public HealthBase healthBase;
+    public UIFillUpdater uiGunUpdater;
+
+
+    private bool _alive = true;
+
+    private void OnValidate()
+    {
+        if (healthBase == null) healthBase = GetComponent<HealthBase>();
+    }
+
+    private void Awake()
+    {
+        OnValidate();
+
+        healthBase.OnDamage += Damage;
+        healthBase.OnKill += OnKill;
+    }
+
     [Header("Boss")]
     public GameObject boss;
     public bool gameObjectBoss = false;
 
     #region LIFE
-    public void Damage(float damage)
+    private void OnKill(HealthBase h)
+    {
+        if (_alive)
+        {
+            _alive = false;
+            animator.SetTrigger("Death");
+            colliders.ForEach(i => i.enabled = false);
+
+            Invoke(nameof(Revive), 2f);
+        }
+    }
+
+    private void Revive()
+    {
+        _alive = true;
+        healthBase.ResetLife();
+        animator.SetTrigger("Revive");
+        Respown();
+        Invoke(nameof(TurnOnColliders), .1f);
+    }
+
+    private void TurnOnColliders()
+    {
+        colliders.ForEach(i => i.enabled = true);
+    }
+
+    public void Damage(HealthBase h)
     {
         flashColors.ForEach(i => i.Flash());
     }
 
     public void Damage(float damage, Vector3 dir)
     {
-        Damage(damage);
+        //Damage(damage);
     }
     #endregion
 
@@ -74,5 +121,14 @@ public class Player : MonoBehaviour, IDamageable
         characterController.Move(speedVector * Time.deltaTime);
 
         animator.SetBool("Run", isWalking);
+    }
+
+    [NaughtyAttributes.Button]
+    public void Respown()
+    {
+        if (CheckPointManager.Instance.HasCheckPoint())
+        {
+            transform.position = CheckPointManager.Instance.GetPosition();
+        }
     }
 }
