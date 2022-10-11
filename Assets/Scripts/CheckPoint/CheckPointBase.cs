@@ -58,7 +58,6 @@ public class CheckPointBase : MonoBehaviour
 
     IEnumerator CheckPointCoroutine()
     {
-        Debug.Log("Entrou");
         text.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
 
