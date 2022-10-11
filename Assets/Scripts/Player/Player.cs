@@ -25,7 +25,11 @@ public class Player : MonoBehaviour//, IDamageable
     [Header("Life")]
     public HealthBase healthBase;
     public UIFillUpdater uiGunUpdater;
+    public float reviveDuration = 3f;
 
+    [Header("Boss")]
+    private GameObject boss;
+    private bool gameObjectBoss = false;
 
     private bool _alive = true;
 
@@ -42,10 +46,6 @@ public class Player : MonoBehaviour//, IDamageable
         healthBase.OnKill += OnKill;
     }
 
-    [Header("Boss")]
-    public GameObject boss;
-    public bool gameObjectBoss = false;
-
     #region LIFE
     private void OnKill(HealthBase h)
     {
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour//, IDamageable
             animator.SetTrigger("Death");
             colliders.ForEach(i => i.enabled = false);
 
-            Invoke(nameof(Revive), 2f);
+            Invoke(nameof(Revive), reviveDuration);
         }
     }
 
@@ -76,6 +76,8 @@ public class Player : MonoBehaviour//, IDamageable
     public void Damage(HealthBase h)
     {
         flashColors.ForEach(i => i.Flash());
+        //EfectsManager.Instance.ChangeVignette();
+        ShakeCamera.Instance.Shake();
     }
 
     public void Damage(float damage, Vector3 dir)
