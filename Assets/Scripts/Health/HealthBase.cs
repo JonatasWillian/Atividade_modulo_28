@@ -46,6 +46,11 @@ public class HealthBase : MonoBehaviour, IDamageable
     {
         _currentLife -= f;
 
+        if (_currentLife < 10)
+        {
+            EfectsManager.Instance.ChangeVignette();
+        }
+
         if (_currentLife <= 0)
         {
             Kill();
