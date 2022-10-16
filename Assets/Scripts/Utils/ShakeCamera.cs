@@ -38,7 +38,7 @@ public class ShakeCamera : Singleton<ShakeCamera>
         {
             shakeTime -= Time.deltaTime;
         }
-        else
+        else if(c != null)
         {
             c.m_AmplitudeGain = 0f;
             c.m_FrequencyGain = 0f;

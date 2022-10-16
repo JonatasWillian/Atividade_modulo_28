@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ebac.Core.Singleton;
 
-public class Player : MonoBehaviour//, IDamageable
+public class Player : Singleton<Player>//, IDamageable
 {
     public List<Collider> colliders;
     public Animator animator;
@@ -31,15 +32,38 @@ public class Player : MonoBehaviour//, IDamageable
     private GameObject boss;
     private bool gameObjectBoss = false;
 
+    [Header("UI")]
+    public GameObject text;
+
+    private Coroutine checkLifePack = null;
+
     private bool _alive = true;
+
+    private void Start()
+    {
+        StartCoroutine(CheckLifePackCoroutine());
+    }
+
+
+    IEnumerator CheckLifePackCoroutine()
+    {
+        text.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+
+        yield return new WaitForSeconds(.5f);
+        text.gameObject.SetActive(false);
+
+        checkLifePack = null;
+    }
 
     private void OnValidate()
     {
         if (healthBase == null) healthBase = GetComponent<HealthBase>();
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         OnValidate();
 
         healthBase.OnDamage += Damage;
@@ -77,7 +101,7 @@ public class Player : MonoBehaviour//, IDamageable
     {
         flashColors.ForEach(i => i.Flash());
         //EfectsManager.Instance.ChangeVignette();
-        ShakeCamera.Instance.Shake();
+        //ShakeCamera.Instance.Shake();
     }
 
     public void Damage(float damage, Vector3 dir)
