@@ -8,6 +8,7 @@ TagManager:
   - Boss
   - Trigger
   - CheckPoint
+  - LifePack
   layers:
   - Default
   - TransparentFX
