@@ -17,7 +17,6 @@ public class ActionLifePack : MonoBehaviour
     {
         if (soInt.value > 0)
         {
-            Debug.Log("Recover Life");
             ItemManager.Instance.RemoveByType(ItemType.LIFE_PACK);
             Player.Instance.healthBase.ResetLife();
         }
@@ -27,7 +26,6 @@ public class ActionLifePack : MonoBehaviour
     {
         if (Input.GetKeyDown(keyCode))
         {
-            Debug.Log("Key Down");
             RecoverLife();
         }
     }
