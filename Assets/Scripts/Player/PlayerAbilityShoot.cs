@@ -13,6 +13,9 @@ public class PlayerAbilityShoot : PlayerAbilityBase
     public GunBase gunShootLimit;
     public GunBase gunShootAngle;
 
+    [Header("Color")]
+    public FlashColor _flashColor;
+
     [Header("Position")]
     public Transform gunPosition;
 
@@ -78,6 +81,7 @@ public class PlayerAbilityShoot : PlayerAbilityBase
     private void StartShoot()
     {
         _currentGun.StartShoot();
+        _flashColor?.Flash();
     }
 
     private void CanceledShoot()
