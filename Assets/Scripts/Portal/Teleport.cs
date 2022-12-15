@@ -14,7 +14,7 @@ public class Teleport : MonoBehaviour
 
     void Awake()
     {
-        GetComponent<BoxCollider>().isTrigger = true;
+        //GetComponent<BoxCollider>().isTrigger = true;
     }
 
     private void OnTriggerEnter(Collider other)
