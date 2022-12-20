@@ -12,20 +12,30 @@ public class Teleport : MonoBehaviour
     public bool destroyTeleport = false;
     bool rotinaIniciada = false;
 
-    void Awake()
-    {
-        //GetComponent<BoxCollider>().isTrigger = true;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (destinos.Length > 0 && !rotinaIniciada)
         {
             int positions = Random.Range(0, destinos.Length);
+
             if (destinos[positions])
             {
-                other.transform.position = destinos[positions].position;
-                other.transform.rotation = destinos[positions].rotation;
+                PlayerMagneticTrigger playerMagneticTrigger = other.gameObject.GetComponent<PlayerMagneticTrigger>();
+                Player player = other.gameObject.GetComponent<Player>();
+
+                if (playerMagneticTrigger != null || player != null)
+                {
+                    Player.Instance.characterController.enabled = false;
+                    Player.Instance.transform.position = destinos[positions].position;
+                    Player.Instance.transform.rotation = destinos[positions].rotation;
+                    Player.Instance.characterController.enabled = true;
+                }
+                else
+                {
+                    other.transform.position = destinos[positions].position;
+                    other.transform.rotation = destinos[positions].rotation;
+                }
+
                 if (destroyTeleport)
                 {
                     StartCoroutine(DestoyTeleportCoroutine());
