@@ -19,6 +19,8 @@ public class CheckPointManager : Singleton<CheckPointManager>
         if (i > lastCheckPointKey)
         {
             lastCheckPointKey = i;
+            SaveManager.Instance.SaveCheckPointKey(i);
+            SaveManager.Instance.SaveCurrentLife(Player.Instance.healthBase.CurrentLife);
         }
     }
 
