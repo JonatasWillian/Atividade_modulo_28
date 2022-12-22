@@ -757,7 +757,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214949704}
-  m_LocalRotation: {x: 0.16245985, y: -0.688191, z: 0.16245984, w: 0.688191}
+  m_LocalRotation: {x: 0.16245984, y: -0.68819094, z: 0.16245985, w: 0.68819106}
   m_LocalPosition: {x: -89.098206, y: 30.203571, z: 109.40648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -808,7 +808,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244510970}
-  m_LocalRotation: {x: 0.29611886, y: -0.24049859, z: 0.07731318, w: 0.9211388}
+  m_LocalRotation: {x: 0.29611886, y: -0.24049856, z: 0.07731317, w: 0.9211389}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3200,6 +3200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_SaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8253098988032699963, guid: b7a7d013e44c3e94689c4a456e54846b, type: 3}
+      propertyPath: _saveSetup.playerName
+      value: Jonatas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7a7d013e44c3e94689c4a456e54846b, type: 3}
 --- !u!4 &1011241423 stripped
@@ -5271,7 +5275,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494666223}
-  m_LocalRotation: {x: 0.078086905, y: 0.7027819, z: -0.0780869, w: 0.702782}
+  m_LocalRotation: {x: 0.07808691, y: 0.7027819, z: -0.078086905, w: 0.702782}
   m_LocalPosition: {x: -200.35999, y: 36.230003, z: 41.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5357,7 +5361,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500100153}
-  m_LocalRotation: {x: 0.31278092, y: -0.2390564, z: 0.08166341, w: 0.91561526}
+  m_LocalRotation: {x: 0.31278092, y: -0.2390564, z: 0.081663415, w: 0.91561526}
   m_LocalPosition: {x: 322.96094, y: 42.625195, z: 151.86642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
