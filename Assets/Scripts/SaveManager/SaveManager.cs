@@ -64,6 +64,19 @@ public class SaveManager : Singleton<SaveManager>
         SaveItens();
         Save();
     }
+
+    public void SaveCheckPointKey(int key)
+    {
+        _saveSetup.checkPointKey = key;
+        SaveItens();
+        Save();
+    }
+
+    public void SaveCurrentLife(float life)
+    {
+        _saveSetup.playerCurrentLife = life;
+        Save();
+    }
     #endregion
 
     private void SaveFile(string json)
@@ -111,6 +124,8 @@ public class SaveSetup
     public int lastLevel;
     public float coins;
     public float health;
+    public int checkPointKey;
+    public float playerCurrentLife;
 
     public string playerName;
 }
