@@ -175,9 +175,10 @@ public class Player : Singleton<Player>//, IDamageable
         speed = defaultSpeed;
     }
 
-    public void ChangeTexture(ClothSetup setup, float duration)
+    public void ChangeTexture(ClothSetup setup)
     {
-        StartCoroutine(ChangeTextureCoroutine(setup, duration));
+        _clothChanger.ChangeTexture(setup);
+        //StartCoroutine(ChangeTextureCoroutine(setup, duration));
     }
 
     IEnumerator ChangeTextureCoroutine(ClothSetup setup, float duration)
