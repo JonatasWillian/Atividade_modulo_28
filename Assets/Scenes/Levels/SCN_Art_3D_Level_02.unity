@@ -1811,6 +1811,9 @@ MonoBehaviour:
   startAnimationDuration: 0.2
   startAnimationEase: 27
   startWithBornAnimation: 1
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls: []
   waypoints:
   - {fileID: 448797740}
   - {fileID: 205879758}
@@ -3619,10 +3622,7 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 1160588613}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 1751905172}
-  - {fileID: 1958524785}
-  - {fileID: 214949705}
+  m_ChildCameras: []
   m_Instructions:
   - m_FullHash: 1432961145
     m_VirtualCamera: {fileID: 1958524785}
@@ -6797,7 +6797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1149636600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8147,6 +8147,9 @@ MonoBehaviour:
   startAnimationDuration: 0.2
   startAnimationEase: 27
   startWithBornAnimation: 1
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls: []
   waypoints:
   - {fileID: 438295085}
   - {fileID: 1977291867}
@@ -16964,6 +16967,9 @@ MonoBehaviour:
   startAnimationDuration: 0.2
   startAnimationEase: 27
   startWithBornAnimation: 1
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls: []
   gunBase: {fileID: 838008812}
 --- !u!4 &3231876528802065078
 Transform:
