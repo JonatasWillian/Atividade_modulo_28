@@ -23,8 +23,16 @@ namespace Cloth
         public virtual void Collect()
         {
             var setup = ClothManager.Instance.GetSetupByType(clothType);
-            Player.Instance.ChangeTexture(setup);
-            HideObject();
+            if (setup != null)
+            {
+                Player.Instance.ChangeTexture(setup);
+                SaveManager.Instance.SaveEquippedCloth(clothType);
+                HideObject();
+            }
+            else
+            {
+
+            }
         }
 
         private void HideObject()
