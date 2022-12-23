@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ebac.Core.Singleton;
+using Cloth;
 
 public class SaveManager : Singleton<SaveManager>
 {
@@ -73,14 +74,14 @@ public class SaveManager : Singleton<SaveManager>
         _saveSetup.playerCurrentLife = life;
     }
 
-    /*public void SaveSkin(Texture2D skin)
-    {
-        
-    }*/
-
     public void CommitSave()
     {
         Save();
+    }
+
+    public void SaveEquippedCloth(ClothType clothType)
+    {
+        _saveSetup.activeClothType = clothType;
     }
     #endregion
 
@@ -107,7 +108,7 @@ public class SaveManager : Singleton<SaveManager>
             Save();
         }
 
-        FileLoaded.Invoke(_saveSetup);
+        FileLoaded?.Invoke(_saveSetup);
     }
 
     [NaughtyAttributes.Button]
@@ -131,7 +132,7 @@ public class SaveSetup
     public float health;
     public int checkPointKey;
     public float playerCurrentLife;
-    public Texture2D skin;
+    public ClothType activeClothType = ClothType.NONE;
 
     public string playerName;
 }
