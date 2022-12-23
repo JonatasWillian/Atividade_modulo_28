@@ -4,5 +4,6 @@
     "health": 1.0,
     "checkPointKey": 2,
     "playerCurrentLife": 20.0,
+    "activeClothType": 0,
     "playerName": "Jonatas"
 }
