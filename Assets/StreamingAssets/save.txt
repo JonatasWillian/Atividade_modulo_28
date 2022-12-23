@@ -1,8 +1,8 @@
 {
     "lastLevel": 1,
-    "coins": 15.0,
-    "health": 0.0,
-    "checkPointKey": 1,
+    "coins": 25.0,
+    "health": 1.0,
+    "checkPointKey": 2,
     "playerCurrentLife": 20.0,
     "playerName": "Jonatas"
 }
