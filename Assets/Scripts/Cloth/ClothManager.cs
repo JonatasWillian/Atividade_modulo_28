@@ -9,7 +9,8 @@ namespace Cloth
     {
         SPEED,
         STRONG,
-        HEALTH
+        HEALTH,
+        NONE
     }
 
     public class ClothManager : Singleton<ClothManager>
@@ -18,7 +19,14 @@ namespace Cloth
 
         public ClothSetup GetSetupByType(ClothType clothType)
         {
-            return clothSetups.Find(i => i.clothType == clothType);
+            if (clothType != ClothType.NONE)
+            {
+                return clothSetups.Find(i => i.clothType == clothType);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 
