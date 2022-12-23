@@ -49,32 +49,37 @@ public class SaveManager : Singleton<SaveManager>
     {
         _saveSetup.coins = Itens.ItemManager.Instance.GetItemByType(Itens.ItemType.COIN).soInt.value;
         _saveSetup.health = Itens.ItemManager.Instance.GetItemByType(Itens.ItemType.LIFE_PACK).soInt.value;
-        Save();
     }
 
     public void SaveName(string text)
     {
         _saveSetup.playerName = text;
-        Save();
     }
 
     public void SaveLastLevel(int level)
     {
         _saveSetup.lastLevel = level;
         SaveItens();
-        Save();
     }
 
     public void SaveCheckPointKey(int key)
     {
         _saveSetup.checkPointKey = key;
         SaveItens();
-        Save();
     }
 
     public void SaveCurrentLife(float life)
     {
         _saveSetup.playerCurrentLife = life;
+    }
+
+    /*public void SaveSkin(Texture2D skin)
+    {
+        
+    }*/
+
+    public void CommitSave()
+    {
         Save();
     }
     #endregion
@@ -126,6 +131,7 @@ public class SaveSetup
     public float health;
     public int checkPointKey;
     public float playerCurrentLife;
+    public Texture2D skin;
 
     public string playerName;
 }
