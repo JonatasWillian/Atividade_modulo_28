@@ -22,7 +22,7 @@ namespace Enemy
             gunBase.StartShoot();
         }
 
-        public override void Update()
+        /*public override void Update()
         {
             base.Update();
 
@@ -36,7 +36,6 @@ namespace Enemy
             }
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_index].transform.position, Time.deltaTime * speed);
-        }
-
+        }*/
     }
 }
