@@ -55,7 +55,7 @@ public class @Inputs : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""83535a4b-d279-4f51-bad0-6cbbdedddfcb"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
