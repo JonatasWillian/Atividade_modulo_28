@@ -9,15 +9,18 @@ namespace Enemy
 {
     public class EnemyBase : MonoBehaviour, IDamageable
     {
+        [Header("Collider")]
         public Collider collider;
+
+        [Header("FlasColor")]
         public FlashColor flashColor;
 
+        [Header("Particle")]
         public ParticleSystem particleSystem;
 
+        [Header("Life/Look")]
         public float startLife = 10f;
-
         public bool lookAtPlayer = false;
-
         [SerializeField] private float _currentLife;
 
         [Header("Animation")]
@@ -25,6 +28,7 @@ namespace Enemy
 
         [Header("Start Animation")]
         public float startAnimationDuration = .2f;
+        [Space]
         public Ease startAnimationEase = Ease.OutBack;
         public bool startWithBornAnimation = true;
 
