@@ -1,9 +1,9 @@
 {
-    "lastLevel": 1,
+    "lastLevel": 0,
     "coins": 0.0,
     "health": 0.0,
-    "checkPointKey": 1,
-    "playerCurrentLife": 20.0,
-    "activeClothType": 0,
+    "checkPointKey": 0,
+    "playerCurrentLife": 0.0,
+    "activeClothType": 3,
     "playerName": "Jonatas"
 }
