@@ -8,8 +8,9 @@ public class Player : Singleton<Player>//, IDamageable
 {
     public List<Collider> colliders;
     public Animator animator;
-
     public CharacterController characterController;
+
+    [Header("Status Player")]
     public float speed = 1f;
     public float turnSpeed = 1f;
     public float gravit = -9.8f;
