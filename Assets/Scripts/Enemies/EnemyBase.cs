@@ -21,6 +21,7 @@ namespace Enemy
         [Header("Life/Look")]
         public float startLife = 10f;
         public bool lookAtPlayer = false;
+        public float timeDeath = .2f;
         [SerializeField] private float _currentLife;
 
         [Header("Animation")]
@@ -67,7 +68,7 @@ namespace Enemy
         protected virtual void OnKill()
         {
             if (collider != null) collider.enabled = false;
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, timeDeath);
             PlayAnimationByTrigger(AnimationType.DEATH);
             OnKillEvent?.Invoke();
         }
@@ -104,11 +105,11 @@ namespace Enemy
             OnDamage(damage);
         }
 
-        public void Damage(float damage, Vector3 dir)
+        /*public void Damage(float damage, Vector3 dir)
         {
             OnDamage(damage);
-            transform.DOMove(transform.position - dir, .1f);
-        }
+            //transform.DOMove(transform.position - dir, .1f);
+        }*/
 
         private void OnCollisionEnter(Collision collision)
         {
