@@ -10,15 +10,26 @@ public class TriggerAudioSource : MonoBehaviour
     [Header("Music Ambience")]
     public GameObject musicAmbience;
 
+    [Space]
+    public string tagPlayer = "Player";
+
     private void OnTriggerEnter(Collider other)
     {
-        musicFight.SetActive(true);
-        musicAmbience.SetActive(false);
+        if (transform.CompareTag(tagPlayer))
+        {
+            Debug.Log("Entrou");
+            musicFight.SetActive(true);
+            musicAmbience.SetActive(false);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        musicFight.SetActive(false);
-        musicAmbience.SetActive(true);
+        if (transform.CompareTag(tagPlayer))
+        {
+            Debug.Log("Saiu");
+            musicFight.SetActive(false);
+            musicAmbience.SetActive(true);
+        }
     }
 }
