@@ -67,10 +67,10 @@ public class HealthBase : MonoBehaviour, IDamageable
         OnDamage?.Invoke(this);
     }
 
-    public void Damage(float damage, Vector3 dir)
+    /*public void Damage(float damage, Vector3 dir)
     {
         Damage(damage);
-    }
+    }*/
 
     private void UpDateUI()
     {
