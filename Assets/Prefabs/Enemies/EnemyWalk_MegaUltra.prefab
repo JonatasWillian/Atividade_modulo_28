@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3624509075937394126}
   - component: {fileID: 2975083563665612321}
   m_Layer: 0
-  m_Name: EnemyWalk_Plus
+  m_Name: EnemyWalk_MegaUltra
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2975083563665612325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.843506, y: 18.124454, z: -25.853321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_Children:
   - {fileID: 2975083564490424790}
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ MonoBehaviour:
   collider: {fileID: 2975083563665612326}
   flashColor: {fileID: 4974862572851450796}
   particleSystem: {fileID: 2975083564092150514}
-  startLife: 6
+  startLife: 21
   lookAtPlayer: 1
   timeDeath: 0.2
   _currentLife: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   minDistance: 1
-  speed: 6
+  speed: 2.5
 --- !u!114 &2975083563665612321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4932,7 +4932,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3360d671f47178e45bb62eeec1787847, type: 2}
+  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5037,7 +5037,7 @@ PrefabInstance:
     - target: {fileID: 5144924261696689607, guid: 8bec79f815163ae43b0faf61a3b8baca, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02649bcd85578274994a8fab9c5705d3, type: 2}
+      objectReference: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 6281779893053664936, guid: 8bec79f815163ae43b0faf61a3b8baca, type: 3}
       propertyPath: m_RootOrder
       value: 1

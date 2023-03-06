@@ -91,7 +91,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   waypoints:
-  - {fileID: 7640367977057844477, guid: c0f7afa75e1b977459167764606dd09c, type: 3}
+  - {fileID: 0}
   minDistance: 1
   speed: 5
 --- !u!114 &2975083563665612321
