@@ -42,7 +42,7 @@ public class SaveManager : Singleton<SaveManager>
     private void Save()
     {
         string setupToJson = JsonUtility.ToJson(_saveSetup, true);
-        Debug.Log(setupToJson);
+        //Debug.Log(setupToJson);
         SaveFile(setupToJson);
     }
 
@@ -87,7 +87,7 @@ public class SaveManager : Singleton<SaveManager>
 
     private void SaveFile(string json)
     {
-        Debug.Log(_path);
+        //Debug.Log(_path);
         File.WriteAllText(_path, json);
     }
 

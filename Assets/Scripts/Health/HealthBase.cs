@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Cloth;
 
 public class HealthBase : MonoBehaviour, IDamageable
@@ -35,7 +37,7 @@ public class HealthBase : MonoBehaviour, IDamageable
         UpDateUI();
     }
 
-    protected virtual void Kill()
+    public virtual void Kill()
     {
         if (destroyOnKill)
             Destroy(gameObject, 1f);

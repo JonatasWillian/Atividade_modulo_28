@@ -15,9 +15,8 @@ public class TriggerAudioSource : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (transform.CompareTag(tagPlayer))
+        if (other.gameObject.CompareTag(tagPlayer))
         {
-            Debug.Log("Entrou");
             musicFight.SetActive(true);
             musicAmbience.SetActive(false);
         }
@@ -25,9 +24,8 @@ public class TriggerAudioSource : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (transform.CompareTag(tagPlayer))
+        if (other.gameObject.CompareTag(tagPlayer))
         {
-            Debug.Log("Saiu");
             musicFight.SetActive(false);
             musicAmbience.SetActive(true);
         }
