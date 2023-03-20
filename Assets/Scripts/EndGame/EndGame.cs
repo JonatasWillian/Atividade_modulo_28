@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class EndGame : MonoBehaviour
 {
     public List<GameObject> endGameObjects;
+    public UnityEvent Events;
 
     private bool _endGame = false;
 
