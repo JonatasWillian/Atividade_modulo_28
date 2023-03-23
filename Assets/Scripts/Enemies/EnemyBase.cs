@@ -46,6 +46,7 @@ namespace Enemy
         private void Start()
         {
             _player = GameObject.FindObjectOfType<Player>();
+            EnemiesManager.Instance.RegisterEnemy(this);
         }
 
         protected void ResetLife()
@@ -71,6 +72,7 @@ namespace Enemy
             Destroy(gameObject, timeDeath);
             PlayAnimationByTrigger(AnimationType.DEATH);
             OnKillEvent?.Invoke();
+            EnemiesManager.Instance.EnemyDie(this);
         }
 
         public void OnDamage(float f)
