@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Ebac.Core.Singleton;
 using Enemy;
+using System.Linq;
 
 public class EnemiesManager : Singleton<EnemiesManager>
 {
@@ -11,10 +12,11 @@ public class EnemiesManager : Singleton<EnemiesManager>
 
     private List<EnemyBase> enemies = new List<EnemyBase>();
 
-    public void RegisterEnemy(EnemyBase enemy)
+    private void Start()
     {
-        enemies.Add(enemy);
+        enemies = FindObjectsOfType<EnemyBase>(true).ToList();
     }
+
 
     public void EnemyDie(EnemyBase enemy)
     {

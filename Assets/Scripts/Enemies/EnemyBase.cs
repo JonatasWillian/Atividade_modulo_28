@@ -46,7 +46,7 @@ namespace Enemy
         private void Start()
         {
             _player = GameObject.FindObjectOfType<Player>();
-            EnemiesManager.Instance.RegisterEnemy(this);
+            //EnemiesManager.Instance.RegisterEnemy(this);
         }
 
         protected void ResetLife()
