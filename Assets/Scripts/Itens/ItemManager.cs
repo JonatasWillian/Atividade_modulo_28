@@ -20,6 +20,8 @@ namespace Itens
         {
             Reset();
             LoadItensFromSave();
+
+            EnemiesManager.Instance.OnAllEnemiesDead.AddListener(EnemiesDeadCallback);
         }
 
         public void LoadItensFromSave()
@@ -65,6 +67,11 @@ namespace Itens
         private void AddLifePack()
         {
             AddByType(ItemType.LIFE_PACK);
+        }
+
+        public void EnemiesDeadCallback()
+        {
+            Debug.Log("All Enemies Dead");
         }
     }
 
