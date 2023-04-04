@@ -21,7 +21,7 @@ namespace Itens
             Reset();
             LoadItensFromSave();
 
-            EnemiesManager.Instance.OnAllEnemiesDead.AddListener(EnemiesDeadCallback);
+            EnemiesManager.Instance.OnAllEnemiesDead += EnemiesDeadCallback;
         }
 
         public void LoadItensFromSave()
