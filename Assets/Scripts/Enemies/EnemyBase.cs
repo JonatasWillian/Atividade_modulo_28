@@ -35,6 +35,7 @@ namespace Enemy
 
         [Header("Events")]
         public UnityEvent OnKillEvent;
+        public float timeEvent = 1;
 
         private Player _player;
 
@@ -71,8 +72,15 @@ namespace Enemy
             if (collider != null) collider.enabled = false;
             Destroy(gameObject, timeDeath);
             PlayAnimationByTrigger(AnimationType.DEATH);
-            OnKillEvent?.Invoke();
+            //OnKillEvent?.Invoke();
+            DelayEventKill();
             EnemiesManager.Instance.EnemyDie(this);
+        }
+
+        IEnumerator DelayEventKill()
+        {
+            yield return new WaitForSeconds(timeEvent);
+            OnKillEvent?.Invoke();
         }
 
         public void OnDamage(float f)

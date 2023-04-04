@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Ebac.Core.Singleton;
@@ -8,8 +9,9 @@ using System.Linq;
 
 public class EnemiesManager : Singleton<EnemiesManager>
 {
-    public UnityEvent OnAllEnemiesDead;
+    public event Action OnAllEnemiesDead;
 
+    [SerializeField][Header("Lista dos inimigos cadastrados")]
     private List<EnemyBase> enemies = new List<EnemyBase>();
 
     private void Start()
