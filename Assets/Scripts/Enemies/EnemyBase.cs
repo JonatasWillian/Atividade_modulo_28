@@ -73,7 +73,7 @@ namespace Enemy
             Destroy(gameObject, timeDeath);
             PlayAnimationByTrigger(AnimationType.DEATH);
             //OnKillEvent?.Invoke();
-            DelayEventKill();
+            StartCoroutine(DelayEventKill());
             EnemiesManager.Instance.EnemyDie(this);
         }
 
