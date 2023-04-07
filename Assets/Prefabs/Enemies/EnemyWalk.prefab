@@ -90,6 +90,7 @@ MonoBehaviour:
   OnKillEvent:
     m_PersistentCalls:
       m_Calls: []
+  timeEvent: 1
   waypoints:
   - {fileID: 0}
   minDistance: 1
