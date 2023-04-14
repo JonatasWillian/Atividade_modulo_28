@@ -81,7 +81,7 @@ MonoBehaviour:
   particleSystem: {fileID: 2975083564092150514}
   startLife: 3
   lookAtPlayer: 1
-  timeDeath: 0.2
+  timeDeath: 0.3
   _currentLife: 0
   _animationBase: {fileID: 2975083563665612321}
   startAnimationDuration: 0.2
@@ -90,7 +90,7 @@ MonoBehaviour:
   OnKillEvent:
     m_PersistentCalls:
       m_Calls: []
-  timeEvent: 1
+  timeEvent: 2
   waypoints:
   - {fileID: 0}
   minDistance: 1
