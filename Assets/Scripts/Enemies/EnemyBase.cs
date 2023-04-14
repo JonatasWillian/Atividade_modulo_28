@@ -38,6 +38,7 @@ namespace Enemy
         public float timeEvent = 1;
 
         private Player _player;
+        private EnemyWalk enemyWalk;
 
         private void Awake()
         {
@@ -70,9 +71,7 @@ namespace Enemy
         protected virtual void OnKill()
         {
             if (collider != null) collider.enabled = false;
-            Destroy(gameObject, timeDeath);
             PlayAnimationByTrigger(AnimationType.DEATH);
-            //OnKillEvent?.Invoke();
             StartCoroutine(DelayEventKill());
             EnemiesManager.Instance.EnemyDie(this);
         }
@@ -80,13 +79,15 @@ namespace Enemy
         IEnumerator DelayEventKill()
         {
             yield return new WaitForSeconds(timeEvent);
+            enemyWalk.speed = 0.5f;
             OnKillEvent?.Invoke();
+            Destroy(gameObject, timeDeath);
         }
 
         public void OnDamage(float f)
         {
             if (flashColor != null) flashColor.Flash();
-            if (particleSystem != null) particleSystem.Emit(15);
+            if (particleSystem != null) particleSystem.Emit(5);
 
             transform.position -= transform.forward;
 
