@@ -4755,6 +4755,10 @@ PrefabInstance:
       value: Jonatas
       objectReference: {fileID: 0}
     - target: {fileID: 8253098988032699963, guid: b7a7d013e44c3e94689c4a456e54846b, type: 3}
+      propertyPath: lastLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253098988032699963, guid: b7a7d013e44c3e94689c4a456e54846b, type: 3}
       propertyPath: _saveSetup.coins
       value: 15
       objectReference: {fileID: 0}
