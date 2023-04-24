@@ -21,7 +21,7 @@ namespace Itens
             Reset();
             LoadItensFromSave();
 
-            EnemiesManager.Instance.OnAllEnemiesDead += EnemiesDeadCallback;
+            //EnemiesManager.Instance.OnAllEnemiesDead += EnemiesDeadCallback;
         }
 
         public void LoadItensFromSave()
@@ -69,10 +69,10 @@ namespace Itens
             AddByType(ItemType.LIFE_PACK);
         }
 
-        public void EnemiesDeadCallback()
-        {
-            Debug.Log("All Enemies Dead");
-        }
+        //public void EnemiesDeadCallback()
+        //{
+        //    Debug.Log("All Enemies Dead");
+        //}
     }
 
     [System.Serializable]
