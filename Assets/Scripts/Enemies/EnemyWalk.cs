@@ -10,6 +10,7 @@ namespace Enemy
         public GameObject[] waypoints;
         public float minDistance = 1f;
         public float speed = 1f;
+        public float speedDeath = 2f;
 
         private int _index = 0;
 
@@ -28,6 +29,12 @@ namespace Enemy
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_index].transform.position, Time.deltaTime * speed);
             transform.LookAt(waypoints[_index].transform.position);
+        }
+
+        protected override void OnKill()
+        {
+            speed = speedDeath;
+            base.OnKill();
         }
     }
 }

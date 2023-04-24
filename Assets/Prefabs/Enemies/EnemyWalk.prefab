@@ -95,6 +95,7 @@ MonoBehaviour:
   - {fileID: 0}
   minDistance: 1
   speed: 7
+  speedDeath: 3
 --- !u!114 &2975083563665612321
 MonoBehaviour:
   m_ObjectHideFlags: 0

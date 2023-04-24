@@ -78,7 +78,6 @@ namespace Enemy
 
         IEnumerator DelayEventKill()
         {
-            enemyWalk.speed = 0.5f;
             yield return new WaitForSeconds(timeEvent);
             OnKillEvent?.Invoke();
             Destroy(gameObject, timeDeath);
