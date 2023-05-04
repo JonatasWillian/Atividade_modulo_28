@@ -12,6 +12,8 @@ namespace Enemy
         public float speed = 1f;
         public float speedDeath = 2f;
 
+        public Rigidbody rig;
+
         private int _index = 0;
 
         public override void Update()
@@ -36,6 +38,10 @@ namespace Enemy
             speed = speedDeath;
             base.OnKill();
         }
+
+        private void FixedUpdate()
+        {
+            
+        }
     }
 }
-
