@@ -79,7 +79,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &5467313587815064077
 MonoBehaviour:
@@ -98,11 +98,16 @@ MonoBehaviour:
   particleSystem: {fileID: 1109550784501731714}
   startLife: 10
   lookAtPlayer: 1
+  timeDeath: 0.2
   _currentLife: 0
   _animationBase: {fileID: 5467313587815064076}
   startAnimationDuration: 0.2
   startAnimationEase: 27
   startWithBornAnimation: 1
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  timeEvent: 1
   waypoints: []
   minDistance: 1
   speed: 5
