@@ -16,10 +16,19 @@ namespace Enemy
 
         private int _index = 0;
 
+        public override void Awake()
+        {
+            base.Awake();
+            rig = GetComponent<Rigidbody>();
+        }
+
         public override void Update()
         {
             base.Update();
+        }
 
+        private void FixedUpdate()
+        {
             if (Vector3.Distance(transform.position, waypoints[_index].transform.position) < minDistance)
             {
                 _index++;
@@ -29,7 +38,10 @@ namespace Enemy
                 }
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, waypoints[_index].transform.position, Time.deltaTime * speed);
+            //transform.position = Vector3.MoveTowards(transform.position, waypoints[_index].transform.position, Time.deltaTime * speed);
+
+            Vector3 direction = (waypoints[_index].transform.position - transform.position).normalized;
+            rig.MovePosition(transform.position + direction * Time.deltaTime * speed);
             transform.LookAt(waypoints[_index].transform.position);
         }
 
@@ -37,11 +49,6 @@ namespace Enemy
         {
             speed = speedDeath;
             base.OnKill();
-        }
-
-        private void FixedUpdate()
-        {
-            
         }
     }
 }

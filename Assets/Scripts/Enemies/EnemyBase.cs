@@ -40,7 +40,7 @@ namespace Enemy
         private Player _player;
         private EnemyWalk enemyWalk;
 
-        private void Awake()
+        public virtual void Awake()
         {
             Init();
         }
