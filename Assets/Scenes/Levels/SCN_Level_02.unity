@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 2a40fd66b61296b428a4ee879dfa8302, type: 2}
 --- !u!1 &1969757
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_GroundRock04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8711277840774425792, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -955,6 +959,10 @@ PrefabInstance:
     - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_Name
       value: PFB_GroundRock04 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8711277840774425792, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_RootOrder
@@ -1341,6 +1349,10 @@ PrefabInstance:
     - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_Name
       value: PFB_GroundRock04 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8711277840774425792, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_RootOrder
@@ -1769,8 +1781,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214949704}
-  m_LocalRotation: {x: 7.1931997e-17, y: 0.973249, z: -0.22975291, w: 9.503858e-17}
-  m_LocalPosition: {x: -295.40823, y: 55.57357, z: 93.98648}
+  m_LocalRotation: {x: 0.000000006847172, y: 0.973249, z: -0.22975294, w: 0.000000029005085}
+  m_LocalPosition: {x: -295.74823, y: 55.57357, z: 94.12648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 405164351}
@@ -1999,7 +2011,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244510970}
-  m_LocalRotation: {x: -0.011025831, y: 0.9513989, z: -0.30584663, w: -0.034298114}
+  m_LocalRotation: {x: -0.011025907, y: 0.9513989, z: -0.30584663, w: -0.034298353}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4330,10 +4342,7 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 1160588613}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 1751905172}
-  - {fileID: 1958524785}
-  - {fileID: 214949705}
+  m_ChildCameras: []
   m_Instructions:
   - m_FullHash: 1432961145
     m_VirtualCamera: {fileID: 1958524785}
@@ -5684,6 +5693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_GroundRock04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8711277840774425792, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -6621,7 +6634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933173757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.69, y: -21.31, z: -178.31}
+  m_LocalPosition: {x: 63.69, y: -20.5, z: -178.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1971732911}
@@ -7412,7 +7425,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060536928}
-  m_LocalRotation: {x: -0.011646229, y: 0.94569385, z: -0.32305607, w: -0.03409243}
+  m_LocalRotation: {x: -0.011646307, y: 0.94569385, z: -0.32305607, w: -0.034092657}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7525,6 +7538,10 @@ PrefabInstance:
       propertyPath: key
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2303108970604703927, guid: d492f68c5e063764192681d190808d4e, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 722365502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d492f68c5e063764192681d190808d4e, type: 3}
 --- !u!114 &1062431745 stripped
@@ -7771,6 +7788,10 @@ PrefabInstance:
     - target: {fileID: 8778425298350167733, guid: bcab836cef6dc7c4f81683bcd8f114b3, type: 3}
       propertyPath: m_Name
       value: PFB_GroundRock01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778425298350167733, guid: bcab836cef6dc7c4f81683bcd8f114b3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcab836cef6dc7c4f81683bcd8f114b3, type: 3}
@@ -10866,8 +10887,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494666223}
-  m_LocalRotation: {x: 0.11043159, y: 0.000000029618187, z: -0.0000000032909115, w: 0.9938837}
-  m_LocalPosition: {x: -384.72, y: 61.600002, z: 3.899994}
+  m_LocalRotation: {x: 0.11043159, y: 0.000000029634052, z: -0.0000000032926744, w: 0.9938837}
+  m_LocalPosition: {x: -385.01, y: 61.600002, z: 3.9700012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1267336533}
@@ -10900,7 +10921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495030713}
   m_LocalRotation: {x: -0, y: 0.41550612, z: -0, w: -0.90959036}
-  m_LocalPosition: {x: 0.8, y: 29.13, z: 257}
+  m_LocalPosition: {x: 0.8, y: 28.75, z: 257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1183264469}
@@ -11156,8 +11177,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500100153}
-  m_LocalRotation: {x: -0.011646233, y: 0.94569385, z: -0.32305607, w: -0.034092434}
-  m_LocalPosition: {x: 113.80553, y: 67.99519, z: 182.67953}
+  m_LocalRotation: {x: -0.011646312, y: 0.94569385, z: -0.3230561, w: -0.034092657}
+  m_LocalPosition: {x: 113.80554, y: 67.99519, z: 182.67953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17836,7 +17857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751905171}
   m_LocalRotation: {x: 0.17481944, y: 1e-45, z: -0, w: 0.98460054}
-  m_LocalPosition: {x: -295.15823, y: 60.57357, z: 53.436478}
+  m_LocalPosition: {x: -295.74823, y: 60.57357, z: 54.12648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1688117040}
@@ -18338,6 +18359,10 @@ PrefabInstance:
     - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_Name
       value: PFB_GroundRock04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 496116524038095586, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8711277840774425792, guid: de26322d17bf8df49a74450be4c0ebe5, type: 3}
       propertyPath: m_RootOrder
@@ -18926,7 +18951,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859236667}
-  m_LocalRotation: {x: -0.012264422, y: 0.93966115, z: -0.34020433, w: -0.033874944}
+  m_LocalRotation: {x: -0.012264508, y: 0.9396612, z: -0.3402043, w: -0.03387518}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19542,7 +19567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958524784}
   m_LocalRotation: {x: 0.009526411, y: 0.99047184, z: -0.09620742, w: 0.09807604}
-  m_LocalPosition: {x: -295.08823, y: 51.57357, z: 92.996475}
+  m_LocalPosition: {x: -295.74823, y: 51.57357, z: 94.12648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1985539682}
@@ -20222,6 +20247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckPoint_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2303108970604703927, guid: d492f68c5e063764192681d190808d4e, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 722365502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d492f68c5e063764192681d190808d4e, type: 3}
 --- !u!114 &2025170190 stripped
@@ -20376,6 +20405,10 @@ PrefabInstance:
       propertyPath: key
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2303108970604703927, guid: d492f68c5e063764192681d190808d4e, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 722365502}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d492f68c5e063764192681d190808d4e, type: 3}
 --- !u!114 &2036952507 stripped
@@ -21296,6 +21329,10 @@ PrefabInstance:
     - target: {fileID: 7336076974915261568, guid: 5530aaddfe55de5489d8221bbcb7b6c9, type: 3}
       propertyPath: m_Name
       value: PFB_GroundRock06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336076974915261568, guid: 5530aaddfe55de5489d8221bbcb7b6c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5530aaddfe55de5489d8221bbcb7b6c9, type: 3}
